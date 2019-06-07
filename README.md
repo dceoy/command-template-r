@@ -1,7 +1,7 @@
 command-template-r
 ==================
 
-Tiny R script as an executable command
+Tiny R script as an executable command on Linux and macOS
 
 - R script scaffold for command-line tool development
   - Default options
@@ -12,6 +12,9 @@ Tiny R script as an executable command
     - `--out`: Set an output directory
     - `--version`: Print version and exit
     - `-h, --help`: Print help and exit
+- Dependencies:
+  - R
+  - docopt.R
 
 Usage
 -----
