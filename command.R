@@ -53,7 +53,7 @@ main <- function(opts, pkgs = NULL, rscripts = NULL,
 
   if (! is.null(pkgs)) {
     message('>>> Load packages')
-    print(suppressMessages(sapply(pkgs, require, character.only = TRUE)))
+    sapply(pkgs, library, character.only = TRUE)
   }
 
   if (! is.null(rscripts)) {
@@ -80,6 +80,6 @@ main <- function(opts, pkgs = NULL, rscripts = NULL,
 
 
 if (! interactive()) {
-  require('docopt', quietly = TRUE)
+  library('docopt', quietly = TRUE)
   main(opts = docopt::docopt(doc, version = script_version))
 }
