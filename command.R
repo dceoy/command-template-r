@@ -53,7 +53,7 @@ main <- function(opts, pkgs = NULL, rscripts = NULL,
 
   if (! is.null(pkgs)) {
     message('>>> Load packages')
-    print(suppressMessages(sapply(all_pkgs, require, character.only = TRUE)))
+    print(suppressMessages(sapply(pkgs, require, character.only = TRUE)))
   }
 
   if (! is.null(rscripts)) {
