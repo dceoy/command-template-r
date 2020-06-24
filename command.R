@@ -42,8 +42,10 @@ fetch_script_root <- function() {
 
 main <- function(opts, pkgs = NULL, rscripts = NULL,
                  root_dir = fetch_script_root()) {
-  options(warn = 1)
-  if (opts[['--debug']]) print(opts)
+  if (opts[['--debug']]) {
+    options(warn = 1)
+    print(opts)
+  }
 
   if (! is.null(opts[['--seed']])) {
     message('>>> Set a random seed')
